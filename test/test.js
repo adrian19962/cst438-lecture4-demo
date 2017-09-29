@@ -66,3 +66,14 @@ describe("Getty api call", function() {
     
     
 }); 
+describe("GETTY Status Code", function() {
+    it("should return without errors", function(done) {
+        getty.makeApiRequest(function(error, imgURI) {
+            //console.log("tweets: " + tweets.length); 
+            console.log("imageURI: " + imgURI); 
+            
+            expect(imgURI.split("://")[0]).to.equal('http'); 
+            done(); 
+        });
+    })
+})
